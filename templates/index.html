@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title %}{% trans "Home" %}{% endblock %}
+{% block title %}{% trans "Home" %}{% endblock %}
+
+{% block breadcrumb_menu %}
+<li class="active">{% trans "Home" %}</li>
+
+{% endblock %}
+
+{% block main %}
+{% blocktrans %}
+
+   <p class="HEADSTYLE"><img src="/static/media/uploads/aboutus.jpg" width="100%" height="251" /></p>
+<p class="HEADSTYLE"></p>
+<p class="HEADSTYLE">NCR: Leading how the world connects, interacts and transacts with business.</p>
+<p>Easy2touch International Dubai is an integrated IT solution provider based in UAE dedicated to providing information technology based business solutions to the retail and hospitality verticals. Easy2touch provides technical, advisory and operational support services to customers in this region . We are a boutique organization focusing on providing IT consultancy to the Classic and Hospitality Retail Sector. With a core functional team who have a collective experience on various retail domains and products we have been steadily making a mark for ourselves in this market.</p>
+<p>It's from this unique position that NCR boldly invites businesses and consumers to "Experience a new world of interaction."</p>
+{% endblocktrans %}
+{% endblock %}
