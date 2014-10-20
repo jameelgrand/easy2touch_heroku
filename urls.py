@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.conf.urls import patterns, include, url
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
-
+import settings
 from mezzanine.core.views import direct_to_template
 from .views import renderhtml
 
@@ -33,6 +33,7 @@ urlpatterns += patterns('',
     # one out.
 
     url("^$", renderhtml, {"template": "index.html"}, name="home"),
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
     # ---------------------------------------------
